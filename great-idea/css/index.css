@@ -18,16 +18,13 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+
+
+
 body {
 	line-height: 1;
 }
@@ -48,9 +45,7 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
-* {
-    box-sizing: border-box;
-}
+
 
 html, body {
     height: 100%;
@@ -63,4 +58,179 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
 }
 
-/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+/* Your code starts here! */
+
+*{
+	box-sizing:border-box;
+	padding:0;
+	margin:0;
+	max-width:100%; 
+  }
+
+body {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+	
+}
+
+header, section, footer, .mainPic {
+	width: 80%;
+}
+
+.mainPic img{
+	margin: 5% 0;
+	width: 100%;
+}
+
+
+header{
+	display: flex;
+
+	top: 0;
+	position: fixed;
+	justify-content: space-between;
+	align-items: flex-start;
+
+}
+
+header nav{
+	display: flex;
+
+	width: 75%;
+	color:grey;
+	padding: 1%;
+	justify-content: space-between;
+}
+
+nav a{
+	font-size: 14px;
+	color: grey;
+	text-decoration: none;
+}
+nav a:hover{
+	color: darkblue;
+}
+
+
+p, address{
+	line-height: 20px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.boxes{
+	display: flex;
+	flex-wrap: wrap;
+
+}
+.boxes .box{
+	width: 48%;
+	border: 1px solid black;
+	background-color: #f2f2f2;
+	padding: 2%;
+	margin: 1%;
+}
+
+.boxes .learn{
+	font-size: 12px;
+	border: 1px solid black;
+	text-align: center;
+padding: 2% 2%;
+width: 30%;
+background-color: white;
+border-radius: 7px;
+margin-top: 3%;
+}
+
+
+.first {
+	display: flex; 
+	justify-content: space-around;
+	padding-top: 10%;
+	padding-bottom: 5%;
+	
+
+
+}
+.first #left h1{
+	font-size: 70px;
+	text-align: center;
+
+}
+
+.first #left {
+	display: flex; 
+	flex-direction: column;
+
+}
+.first p{
+	font-size: 20px;
+	border: 1px solid black;
+	text-align: center;
+padding: 1% 6%;
+
+}
+
+.first p:hover{
+	animation-name:start;
+   animation-duration:0.8s;
+   animation-direction: alternate;
+   animation-iteration-count: infinite;
+  
+}
+
+@keyframes start{
+  0% {background-color: #e6e6ff;}
+  25% {background-color: #8080ff;}
+  50% {background-color: #3333ff;}
+  50% {background-color:  #0000b3;}
+  100% {background-color:  #000066; color: white;}
+}
+
+
+
+
+.second #top, #bottom{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	padding: 5% 0;
+
+}
+
+.second img{
+	width: 100%;
+}
+
+ul{
+	list-style-type: disc;
+	line-height: 30px;
+	list-style-position: inside;
+}
+
+.facts{
+	display: flex;
+
+}
+
+.facts div{
+	width: 50%;
+	padding: 1%;
+
+}
+.facts img{
+	width: 100%;
+}
+
+.facts #factText{
+	padding: 2%;
+}
+
+footer{
+	padding: 3% 1%; 
+}
+
+footer p {
+	text-align: center;
+}
